@@ -14,10 +14,10 @@ Este proyecto es una colección práctica de integraciones con las APIs de [Webe
 
 ## 📦 Tecnologías Utilizadas
 
-- **Lenguaje**: Python / Node.js (según el módulo)
+- **Lenguaje**: Python
 - **Autenticación**: OAuth 2.0 y Tokens Personales
 - **APIs**: Webex REST APIs ([developer.webex.com](https://developer.webex.com))
-- **Herramientas**: Postman, Insomnia, Webex Bot
+- **Herramientas**: Postman, Webex Bot
 
 ---
 
