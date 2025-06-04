@@ -1,12 +1,20 @@
 import requests
+import json
+from dotenv import load_dotenv
+import os
 
 url = "https://webexapis.com/v1/rooms"
 
+load_dotenv()
+
+webex_token = os.getenv("WEBEX_BOT_TOKEN")
+
 payload = {}
 headers = {
-  'Authorization': 'Bearer MWU4ZjI3YTMtMDRhZS00YTNkLWFlMjQtNjY0MTBiYTE5YjJlYjUxYjgzZGYtM2Fj_P0A1_aa83f64c-d5cb-4c26-a953-d22659e4c23a'
+  'Authorization': 'Bearer ' + webex_token
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
 
-print(response.text)
+data = response.json()
+print(json.dumps(data, indent=4))
