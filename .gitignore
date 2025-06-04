@@ -1,0 +1,10 @@
+# Ignorar archivos de entorno local
+.env
+
+# Ignorar carpetas de dependencias
+__pycache__/
+venv/
+node_modules/
+
+# Ignorar archivos de logs
+*.log

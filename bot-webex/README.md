@@ -1,26 +1,47 @@
-# 🔧 Webex API Integration Playground
+# Webex Bot con Python
 
-Este proyecto es una colección práctica de integraciones con las APIs de [Webex](https://developer.webex.com/), centrado en mensajería, monitoreo de dispositivos telefónicos y gestión de troncales SIP. Nuestro objetivo es experimentar, documentar y construir herramientas útiles sobre el ecosistema de Webex Collaboration.
-
----
-
-## 🚀 Objetivos del Proyecto
-
-- 📩 **Envío de mensajes**: Automatización del envío de mensajes a espacios o personas utilizando la API de mensajería de Webex.
-- 📞 **Monitoreo de teléfonos**: Lectura y control de endpoints registrados en Webex Calling, incluyendo estados y configuraciones.
-- 🌐 **Gestión de troncales SIP**: Acceso a información sobre troncales SIP, validación de estados y administración básica.
+Este proyecto muestra cómo crear un **bot de Webex** utilizando Python y las APIs oficiales de Webex.
 
 ---
 
-## 📦 Tecnologías Utilizadas
+## 🤖 ¿Qué es un bot de Webex?
 
-- **Lenguaje**: Python
-- **Autenticación**: OAuth 2.0 y Tokens Personales
-- **APIs**: Webex REST APIs ([developer.webex.com](https://developer.webex.com))
-- **Herramientas**: Postman, Webex Bot
+Un bot es una aplicación que puede enviar y recibir mensajes en Webex, automatizando interacciones en espacios y facilitando flujos de comunicación.
 
 ---
 
-## 📁 Estructura del Proyecto
+## 🚀 Objetivo
 
-- **Bot** ![Creacion de bot](bot-webex)
+Construir un bot que pueda:
+
+- Escuchar mensajes en espacios Webex donde esté agregado
+- Responder automáticamente a mensajes o comandos
+- Gestionar eventos en tiempo real usando Webhooks
+
+---
+
+## 📚 Requisitos
+
+- Cuenta Webex con un bot creado (https://developer.webex.com/my-apps)
+- Token de acceso del bot
+- Python 3.7+
+- Ngrok (opcional, para exponer servidor local durante desarrollo)
+
+---
+
+## 🛠 Tecnologías usadas
+
+- Python 3
+- Flask (servidor web para recibir eventos)
+- python-dotenv (para variables de entorno)
+- requests (para llamadas API a Webex)
+
+---
+
+## 🔧 Cómo empezar
+
+### 1. Crear un bot en Webex
+
+- Ve a [My Apps](https://developer.webex.com/my-apps)
+- Crea un nuevo bot y guarda el token de acceso
+
