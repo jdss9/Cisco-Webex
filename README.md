@@ -27,11 +27,11 @@ Este repositorio es un entorno de laboratorio práctico para trabajar con las AP
 - Python 3.8+ instalado  
 - Archivo `.env` con las siguientes variables:
 
-'''
+```
 env
 WEBEX_ACCESS_TOKEN=your_token_here
 WWEBEX_BOT_ROOMID=your_room_id_here
-'''
+```
 
 ## 🤝 Contribuciones
 Este repositorio está abierto a colaboraciones. Si deseas agregar nuevas funcionalidades, mejorar ejemplos o corregir errores, por favor crea un pull request.
