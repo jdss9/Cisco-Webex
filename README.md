@@ -17,7 +17,7 @@ Este repositorio es un entorno de laboratorio práctico para trabajar con las AP
 
 ## 📁 Estructura del Proyecto
 
-- **Bot** ![Creacion de bot](bot-webex)
+- **Bot** ![Creacion de bot](bot-webex/README.md)
 
 
 ## 🚦 Requisitos
@@ -29,7 +29,7 @@ Este repositorio es un entorno de laboratorio práctico para trabajar con las AP
 
 '''env
 WEBEX_ACCESS_TOKEN=your_token_here
-WEBEX_ROOM_ID=your_room_id_here
+WWEBEX_BOT_ROOMID=your_room_id_here
 '''
 
 ## 🤝 Contribuciones
