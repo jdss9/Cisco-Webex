@@ -25,14 +25,12 @@ Construir un bot que pueda:
 - Cuenta Webex con un bot creado (https://developer.webex.com/my-apps)
 - Token de acceso del bot
 - Python 3.7+
-- Ngrok (opcional, para exponer servidor local durante desarrollo)
 
 ---
 
 ## 🛠 Tecnologías usadas
 
 - Python 3
-- Flask (servidor web para recibir eventos)
 - python-dotenv (para variables de entorno)
 - requests (para llamadas API a Webex)
 
@@ -107,5 +105,65 @@ Con esto, ya tienes listo tu **Webex Bot**, el cual podrás usar para automatiza
 Más adelante en este proyecto aprenderemos a:
 
 - Enviar mensajes a un espacio Webex desde Python
-- Usar Webhooks para escuchar eventos en tiempo real
 - Crear integraciones más seguras usando OAuth2
+
+# 🤖 Integración de un Bot en Webex
+
+Una vez que has creado tu bot en Webex, puedes **agregarlo a un espacio de trabajo** (también llamado "space" o "room"). Al hacerlo, se genera un identificador único llamado `ROOM ID`, necesario para enviar mensajes automatizados.
+
+Para integrar el bot a un espacio, simplemente **invítalo utilizando su `Bot Username` seguido de `@webex.bot`** en el espacio deseado.
+
+![Agregar Bot al Space](pictures/bot_space.png)
+
+Una vez agregado, podrás ver que el bot ya es parte del espacio. ¡Ahora estamos listos para comenzar con la automatización usando Python!
+
+![Bot Agregado al Space](pictures/bot_in_space.png)
+
+---
+
+# 🤖 Automatización: Envío de Mensajes
+
+## 🔍 Obtener ROOM ID
+
+Ya con nuestro token del bot, el siguiente paso es **obtener el ROOM ID** del espacio. Este ID es necesario para que el bot sepa a qué espacio debe enviar mensajes.
+
+Para hacerlo, usaremos el script [`rooms_bot.py`](rooms_bot.py). Solo necesitas agregar tu token al archivo `.env` bajo la variable `WEBEX_BOT_TOKEN`, luego ejecutar el script. La salida mostrará todos los espacios disponibles junto con sus ROOM IDs.
+
+```env
+WEBEX_BOT_TOKEN=your_token_here
+```
+
+Ejemplo de salida:
+
+![ROOMID](pictures/roomid.png)
+
+Ahora puedes completar tu archivo `.env` con las dos variables necesarias para enviar mensajes:
+
+```env
+WEBEX_BOT_TOKEN=your_token_here
+WEBEX_BOT_ROOMID=your_room_id_here
+```
+
+---
+
+## 📤 Enviar mensajes
+
+Con el ROOM ID listo, puedes usar el script [`send_messages.py`](send_messages.py) para enviar mensajes al espacio.
+
+Solo modifica el mensaje que deseas enviar dentro del script.
+
+![Cambiar mensaje](pictures/change_message.png)
+
+Ejecuta el script y recibirás el mensaje automáticamente en tu espacio Webex.
+
+![Mensaje exitoso](pictures/bot_ok.png)
+
+---
+
+## 🚀 ¿Qué sigue?
+
+¡Felicidades! Ya tienes una integración básica funcionando con Webex Bots usando Python.  
+Esto abre la puerta a automatizaciones más poderosas. Por ejemplo, podrías conectar este sistema a herramientas de monitoreo como **Zabbix**, y enviar **alertas automáticas** a tus espacios de trabajo en Webex.
+
+¿Te imaginas recibir notificaciones críticas directamente en tu grupo de soporte?  
+Lo exploraremos más adelante... 😉
