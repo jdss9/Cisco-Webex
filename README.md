@@ -40,4 +40,4 @@ Este repositorio está abierto a colaboraciones. Si deseas agregar nuevas funcio
 Este proyecto está bajo la licencia MIT — consulta el archivo LICENSE para más detalles.
 
 ## 📞 Contacto
-Para preguntas o dudas sobre este proyecto, contáctame en [tu-email@dominio.com]
+Para preguntas o dudas sobre este proyecto, contáctame en juand.sandovals9@hotmail.com
